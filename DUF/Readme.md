@@ -1,0 +1,3 @@
+这是对论文《[Deep Video Super-Resolution Network Using Dynamic Upsampling Filters Without Explicit Motion Compensation](https://openaccess.thecvf.com/content_cvpr_2018/papers/Jo_Deep_Video_Super-Resolution_CVPR_2018_paper.pdf)》的复现，论文中提出的网络被称为`DUF`，代码使用TensorFlow实现。原文的代码地址如下：[https://github.com/yhjo09/VSR-DUF](https://github.com/yhjo09/VSR-DUF)。
+
+详见： [Super-Resolution (lankning.github.io)](https://lankning.github.io/Super-Resolution/DUF.html) 
