@@ -14,9 +14,21 @@
 
 论文链接：[2020-Zooming slow-mo fast and accurate one stage space time video super resolution.pdf](https://arxiv.org/pdf/2002.11616.pdf)
 
-[论文本地链接](./STVSR/2020-Zooming slow-mo fast and accurate one stage space time video super resolution.pdf)
+[论文本地链接](./One-Stage-STVSR/2020-Zooming slow-mo fast and accurate one stage space time video super resolution.pdf)
 
 原文的代码地址如下：[https://github.com/Mukosame/Zooming-Slow-Mo-CVPR-2020](https://github.com/Mukosame/Zooming-Slow-Mo-CVPR-2020)。
+
+## 相关工作
+
+VSR的重要问题是如何对齐前后帧。针对这个问题，一些文章使用了光流法（optical flow），但是获得精确的光流很难，而且光流法是人工产品（artifacts）。
+
+为了规避这个问题，DUF和TDAN分别使用了动态卷积核和可变卷积对齐。EDVR在TDAN基础上对多尺度信息进行采样。然而，它们都是`many to one`的model，需要一堆LR帧来预测HR帧，计算低效。
+
+RNN可以缓解sequence-to-sequence learning，它们可以放进VSR问题中来利用时序信息。可是，没有明确的时序对齐，RNN-based VSR网络也没啥用。
+
+因此，文字提出了一种ConvLSTM架构（`many to many`的），嵌入了一种明确的状态更新单元，用来进行时空视频超分。
+
+![statement-conv-lstm](./One-Stage-STVSR/statement-conv-lstm.png)
 
 ## 名词解释
 
@@ -44,13 +56,23 @@
 
 # 网络架构
 
-![net-arch](./STVSR/net-arch.png)
+整个网络的结构如下图所示，先通过残差块提取`Feature Maps`，再通过特征时序插值无中生有出中间帧的`Feature Maps`，经过`LSTM`进一步特征提取，然后每一帧的`Feature Maps`都经过残差块得到标准需要的`Feature Maps`形状，最后通过`Pixel Shuffle`重建出三个HR帧。不寻常的有两个地方，分别是特征插值和ConvLSTM模块。
+
+![net-arch](./One-Stage-STVSR/net-arch.png)
+
+## Frame Feature Temporal Interpolation
+
+![feature interpolation formula](./One-Stage-STVSR/feature interpolation.png)
+
+![frame feature fig](./One-Stage-STVSR/frame feature fig.png)
+
+## Bidirectional Deformable ConvLSTM
 
 
 
 # 结果
 
-<iframe frameborder="0" src="https://v.qq.com/txp/iframe/player.html?vid=e3250valjad" height="600" allowFullScreen="true"></iframe>
+<iframe frameborder="0" src="https://v.qq.com/txp/iframe/player.html?vid=e3250valjad" height="600" width="100%" allowFullScreen="true"></iframe>
 
 
 
