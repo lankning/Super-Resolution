@@ -13,7 +13,8 @@ Github文档地址：[https://lankning.github.io/Super-Resolution/](https://lank
 - [x] VESPCN 2017 （Only Notes）
 - [x] DUF 2018
 - [x] FALSR 2019（Only Notes）
-- [ ] TGA 2020
+- [ ] TGA 2020（Only Notes）
+- [ ] One-Stage STVSR
 
 
 

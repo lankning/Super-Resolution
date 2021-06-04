@@ -74,9 +74,11 @@ $$
 
 ![train loss](./DUF/train-loss.png)![train acc](./DUF/train-acc.png)
 
-对王者荣耀超分的结果已经放在B站，左边是双线性插值结果，右边是DUF16超分结果，DUF超分结果比双线性插值好一些。[视频链接🔗](https://v.qq.com/x/page/t325055ophw.html)
+对王者荣耀超分的结果已经放在B站和腾讯视频，左边是双线性插值结果，右边是DUF16超分结果，DUF超分结果比双线性插值好一些。[视频链接🔗](https://v.qq.com/x/page/t325055ophw.html)
 
-<iframe height="600" width="100%" src="https://v.qq.com/txp/iframe/player.html?vid=i3250vethx7" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+<center><iframe src="http://player.bilibili.com/player.html?aid=973404988&bvid=BV1k44y1z7Ea&cid=348729269&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" height="600" allowfullscreen="true"> </iframe></center>
+
+<center><iframe height="600" width="100%" src="https://v.qq.com/txp/iframe/player.html?vid=i3250vethx7" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe></center>
 
 DUF效果，如下图所示（摘自paper）。
 

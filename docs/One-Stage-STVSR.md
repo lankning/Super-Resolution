@@ -60,13 +60,15 @@ RNN可以缓解sequence-to-sequence learning，它们可以放进VSR问题中来
 
 ![net-arch](./One-Stage-STVSR/net-arch.png)
 
-## Frame Feature Temporal Interpolation
+## 帧特征插值（Frame Feature Temporal Interpolation）
+
+为了正确显示公式，下方插入图。
 
 ![feature interpolation formula](./One-Stage-STVSR/feature interpolation.png)
 
 ![frame feature fig](./One-Stage-STVSR/frame feature fig.png)
 
-## Bidirectional Deformable ConvLSTM
+## 双向可变卷积LSTM（Bidirectional Deformable ConvLSTM）
 
 
 
