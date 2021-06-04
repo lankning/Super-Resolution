@@ -98,7 +98,9 @@ After 50 epoches, the model performs not bad on train data.
 
 ![train loss](./ESPCN/train-loss.png)![train acc](./ESPCN/train-acc.png)
 
-<iframe frameborder="0" height="600" width="100%" src="https://v.qq.com/txp/iframe/player.html?vid=e3250qzey1f" allowFullScreen="true"></iframe>
+The video has been uploaded to `Tencent Video` and `Bilibili`, `Bilibili Link:` [Click me](https://www.bilibili.com/video/BV1cf4y1a7ZV/)
+
+<iframe frameborder="0" height="500" width="100%" src="https://v.qq.com/txp/iframe/player.html?vid=e3250qzey1f" allowFullScreen="true"></iframe>
 
 As the Figure shows below (original from paper), the ESPCN proposed has a better result than other methods about SR problem like Bicubic and SRCNN.
 
