@@ -12,9 +12,9 @@
 
 最后，采用了一个深度重建网络来生成慢动作视频帧。
 
-论文链接：[2020-Zooming slow-mo fast and accurate one stage space time video super resolution.pdf](https://arxiv.org/pdf/2002.11616.pdf)
+论文链接1：[2020-Zooming slow-mo fast and accurate one stage space time video super resolution.pdf](https://arxiv.org/pdf/2002.11616.pdf)
 
-[论文本地链接](./One-Stage-STVSR/2020-Zooming slow-mo fast and accurate one stage space time video super resolution.pdf)
+论文链接2：[本地链接](./One-Stage-STVSR/2020-Zooming slow-mo fast and accurate one stage space time video super resolution.pdf)
 
 原文的代码地址如下：[https://github.com/Mukosame/Zooming-Slow-Mo-CVPR-2020](https://github.com/Mukosame/Zooming-Slow-Mo-CVPR-2020)。
 
@@ -33,24 +33,17 @@ RNN可以缓解sequence-to-sequence learning，它们可以放进VSR问题中来
 ## 名词解释
 
 1. HR: high-resolution，高分辨率
-
 2. LFR: low frame rate，低帧率
-
 3. LF: low-resolution，低分辨率
-
 4. VFI: video frame interpolation，视频帧插值
-
 5. VSR: video super resolution，视频超分辨率
-
 6. Video Deblur：视频去模糊
-
 7. Temporal Interpolation：时间插值
-
 8. well-posed problem：解存在且唯一
-
 9. ill-posed problem：解可能不存在也可能不唯一
-
 10. inverse problem：反问题，已知输出求输入
+11. hidden state：LSTM中负责短期记忆的结构
+12. cell state：LSTM中负责长期记忆的结构
 
 
 
@@ -68,9 +61,19 @@ RNN可以缓解sequence-to-sequence learning，它们可以放进VSR问题中来
 
 ![frame feature fig](./One-Stage-STVSR/frame feature fig.png)
 
-## 双向可变卷积LSTM（Bidirectional Deformable ConvLSTM）
+## 双向可变ConvLSTM（Bidirectional Deformable ConvLSTM）
 
+传统的`ConvLSTM`结构接收之前的`hidden`和`cell`状态以及当前`LR`的特征图，输出当前的`hidden`和`cell`状态。但是这种结构对处理大幅度运动的能力有限，如果出现大幅运动，之前的状态反而会对当前`hidden`状态产生严重的时序不匹配的噪声。
 
+所以我们使用可变形对齐（deformable alignment），在`ConvLSTM`前做一个处理，将$h_{t-1}$和$c_{t-1}$进行可变形采样（使用一些卷积）。
+
+![deformable convlstm](./One-Stage-STVSR/deformable convlstm.png)
+
+## 帧重建（Reconstruction）
+
+使用前述网络的`h_t`作为重建网络的输入，HR作为输出，使用Pixel Shuffle作为尺寸缩放手段，使用的Loss Function如下所示。
+
+![reconstruction](./One-Stage-STVSR/reconstruction.png)
 
 # 结果
 
