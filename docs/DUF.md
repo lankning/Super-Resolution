@@ -66,6 +66,8 @@ $$
 
 这是一个`end-to-end`网络，不必像`VESPCN`采用多个损失函数相加。
 
+![duf-anly](./DUF/duf-anly.png)
+
 
 
 # 结果
