@@ -24,11 +24,11 @@ def getFrame(videoPath, savePath, gapFrame=1):
                 continue
             else:
                 # frame = np.rot90(frame)
-                #cv2.imshow('video', frame)
+                # cv2.imshow('video', frame)
                 numFrame += 1
                 #print(numFrame)
                 if (numFrame%gapFrame==0):
-                    newPath = savePath + 'Frame{:04d}.png'.format(numFrame)
+                    newPath = savePath + 'Frame{:06d}.png'.format(numFrame)
                     cv2.imencode('.png', frame)[1].tofile(newPath)
         else:
             break

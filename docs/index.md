@@ -10,8 +10,9 @@
 - [x] [VESPCN 2017](./VESPCN.html) （Only Notes）
 - [x] [DUF 2018](./DUF.html)
 - [x] [FALSR 2019](./FALSR.html) （Only Notes）
-- [ ] [TGA 2020](./TGA.html)（Only Notes）
-- [ ] [One-Stage STVSR 2020](./One-Stage-STVSR.html)
+- [x] [TGA 2020](./TGA.html)（Only Notes）
+- [x] [One-Stage STVSR 2020](./One-Stage-STVSR.html) ）（Partly codes）
+- [x] [FSR 2021](./FSR.html)
 
 
 
