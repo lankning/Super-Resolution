@@ -51,7 +51,7 @@ The FSRCNN has better performance on SR problem, as the Figure shows below (orig
 
 Wenkang Zhu
 
-If you have or find any problems, this is my email: [1119741654@qq.com](1119741654@qq.com). And I'm glad to reply it.
+If you have or find any problems, this is my email: [wenkang_zhu@whu.edu.cn](mailto:wenkang_zhu@whu.edu.cn). And I'm glad to reply it.
 Thanks. 
 
 

@@ -98,7 +98,7 @@ The SRCNN has a better result than traditional method about SR problem, as the F
 
 Wenkang Zhu
 
-If you have or find any problems, this is my email: [1119741654@qq.com](1119741654@qq.com). And I'm glad to reply it.
+If you have or find any problems, this is my email: [wenkang_zhu@whu.edu.cn](mailto:wenkang_zhu@whu.edu.cn). And I'm glad to reply it.
 Thanks. 
 
 

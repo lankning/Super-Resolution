@@ -79,7 +79,6 @@ $$
 对王者荣耀超分的结果已经放在B站和腾讯视频，左边是双线性插值结果，右边是DUF16超分结果，DUF超分结果比双线性插值好一些。[B站视频链接🔗](https://www.bilibili.com/video/BV1k44y1z7Ea/)
 
 <center><iframe height="500" width="100%" src="https://v.qq.com/txp/iframe/player.html?vid=i3250vethx7" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe></center>
-
 DUF效果，如下图所示（摘自paper）。
 
 ![paper-result](./DUF/results.png)
@@ -90,7 +89,7 @@ DUF效果，如下图所示（摘自paper）。
 
 朱文康
 
-如果你有问题，欢迎联系我。我的邮箱是：[1119741654@qq.com](1119741654@qq.com)，乐意回复。
+如果你有问题，欢迎联系我。我的邮箱是：[wenkang_zhu@whu.edu.cn](mailto:wenkang_zhu@whu.edu.cn)，乐意回复。
 
 谢谢。
 
